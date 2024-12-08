@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Visionaries Logo</title>
+  <style>
+    /* General Styling */
+    body {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      margin: 0;
+      background-color: #f4f4f9;
+      font-family: 'Arial', sans-serif;
+    }
+
+    /* Logo Container */
+    .logo {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      position: relative;
+    }
+
+    /* Circular Icon */
+    .logo-circle {
+      width: 80px;
+      height: 80px;
+      background: linear-gradient(135deg, #4285F4, #EA4335, #FBBC05, #34A853);
+      border-radius: 50%;
+      position: relative;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      animation: rotate 5s linear infinite;
+    }
+
+    .logo-circle::before {
+      content: '';
+      width: 60px;
+      height: 60px;
+      background: #ffffff;
+      border-radius: 50%;
+    }
+
+    .logo-circle span {
+      position: absolute;
+      font-size: 24px;
+      font-weight: bold;
+      color: #333;
+      z-index: 1;
+    }
+
+    /* Company Name */
+    .logo-text {
+      font-size: 36px;
+      font-weight: bold;
+      color: #333;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      position: relative;
+    }
+
+    .logo-text:hover {
+      color: #4285F4;
+      transition: color 0.3s ease-in-out;
+    }
+
+    /* Animation */
+    @keyframes rotate {
+      from {
+        transform: rotate(0deg);
+      }
+      to {
+        transform: rotate(360deg);
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="logo">
+    <!-- Circle Icon -->
+    <div class="logo-circle">
+      <span>V</span>
+    </div>
+    <!-- Text -->
+    <div class="logo-text">Visionaries</div>
+  </div>
+
+  <script>
+    // Optional: Add an interactive effect on click
+    const logoText = document.querySelector('.logo-text');
+    logoText.addEventListener('click', () => {
+      alert('Welcome to Visionaries!');
+    });
+  </script>
+</body>
+</html>
